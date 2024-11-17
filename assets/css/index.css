@@ -1,1 +1,33 @@
 @import url('headerAndFooter.css');
+
+.opiniones {
+
+    h2 {
+        color: #8031b4;
+        font-weight: bold;
+    }
+
+    header {
+        color: #5c1f85;
+        font-weight: 600;
+
+        h5 {
+            font-weight: 700;
+        }
+    }
+
+    img {
+        height: 120px;
+    }
+
+}
+
+.opinion-card {
+    max-width: 500px !important;
+    margin: 0px 8px;
+    transition: transform 0.3s ease-in-out;
+
+    &:hover {
+        transform: scale(1.05);
+    }
+}

@@ -1,12 +1,174 @@
-:root {
-    --nav-color: #000000;
-    --nav-hover-color: #8422c5;
-    --nav-mobile-background-color: #ffffff;
-    --nav-dropdown-background-color: #ffffff;
-    --nav-dropdown-color: #343136;
-    --nav-dropdown-hover-color: #8422c5;
-}
-
 /*--------------------------------------------------------------
 Header
 --------------------------------------------------------------*/
+@import url('animaciones.css');
+
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.logo {
+    background-image: url('../img/Protovpn_Logo.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 50px;
+    width: 50px;
+
+    &:hover {
+        animation: rotate360 1s linear infinite;
+    }
+}
+
+.texto-nav-principal {
+    color: #000000;
+    font-size: 1.25rem;
+
+    strong {
+        color: #611a91;
+    }
+}
+
+.nav-link {
+    font-size: 1rem !important;
+    font-weight: 700 !important;
+    color: #8422c5 !important;
+    border-radius: 15px !important;
+    transition: background-color 0.4s ease-in-out, color 0.4s ease-in-out, transform 0.4s ease-in-out !important;
+
+    &:hover {
+        background-color: #8422c5;
+        color: white !important;
+        transform: scale(1.1);
+    }
+}
+
+/*--------------------------------------------------------------
+Footer
+--------------------------------------------------------------*/
+
+.footer {
+    background-color: #8031b4;
+    color: #ddd;
+    font-size: 1rem;
+    position: relative;
+    padding: 4rem 1rem;
+    overflow: hidden;
+}
+
+.footer-content {
+    position: relative;
+    z-index: 2;
+}
+
+.footer a {
+    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.footer a:hover {
+    color: #00e1ff !important;
+    transform: translateY(-10%);
+}
+
+.footer-about h4 {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.footer h4 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.footer-contact p {
+    margin: 0;
+    line-height: 1.5;
+}
+
+.footer-links ul {
+    padding: 0;
+    list-style: none;
+}
+
+.footer-links ul li a {
+    display: block;
+    padding: 0.25rem 0;
+}
+
+.footer .social-links a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    transition: transform 0.3s;
+}
+
+.footer .social-links a:hover {
+    transform: scale(1.1);
+}
+
+.text-vpn {
+    color: #e9e5eb;
+}
+
+.wave1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 150px;
+    background-repeat: repeat-x;
+    background-size: 50% 100%;
+    opacity: 0.7;
+    z-index: 1;
+}
+
+.wave2 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 200%;
+    height: 150px;
+    background-repeat: repeat-x;
+    background-size: 50% 100%;
+    opacity: 0.7;
+    z-index: 1;
+}
+
+.wave1 {
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none"><path d="M0,120 C600,60 600,60 1200,120 L1200,0 L0,0 Z" fill="%2300b4d8"/></svg>');
+    animation: wave-animation-top 6s infinite linear;
+}
+
+.wave2 {
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none"><path d="M0,120 C600,60 600,90 1200,120 L1200,0 L0,0 Z" fill="%230087a3"/></svg>');
+    animation: wave-animation-top 10s infinite linear;
+    opacity: 0.5;
+}
+
+.wave3 {
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none"><path d="M0,120 C600,90 600,30 1200,120 L1200,0 L0,0 Z" fill="%23005478"/></svg>');
+    animation: wave-animation-top 15s infinite linear;
+    opacity: 0.3;
+}
+
+.wave4 {
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none"><path d="M0,120 C600,60 600,60 1200,120 L1200,0 L0,0 Z" fill="%2300b4d8"/></svg>');
+    animation: wave-animation-bottom 6s infinite linear;
+}
+
+.wave5 {
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none"><path d="M0,120 C600,60 600,90 1200,120 L1200,0 L0,0 Z" fill="%230087a3"/></svg>');
+    animation: wave-animation-bottom 10s infinite linear;
+    opacity: 0.5;
+}
+
+.wave6 {
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none"><path d="M0,120 C600,90 600,30 1200,120 L1200,0 L0,0 Z" fill="%23005478"/></svg>');
+    animation: wave-animation-bottom 15s infinite linear;
+    opacity: 0.3;
+}

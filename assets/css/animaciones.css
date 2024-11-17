@@ -1,0 +1,28 @@
+@keyframes rotate360 {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes wave-animation-top {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+@keyframes wave-animation-bottom {
+    from {
+      transform: translateX(-50%) scaleY(-1);
+    }
+    to {
+      transform: translateX(0) scaleY(-1);
+    }
+  }
