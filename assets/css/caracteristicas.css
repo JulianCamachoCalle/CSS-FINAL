@@ -1,0 +1,127 @@
+@import url('headerAndFooter.css');
+
+.img-container1 {
+    background-image: url("/assets/img/caracteristicas/img1.avif");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 40vh;
+}
+
+.img-container2 {
+    background-image: url("/assets/img/caracteristicas/img2.avif");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 40vh;
+}
+
+.img-container2:hover {
+    transform: scale(1.1);
+}
+
+.img-container3 {
+    background-image: url("/assets/img/caracteristicas/img3.avif");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 40vh;
+}
+
+.img-container3:hover {
+    transform: scale(1.1);
+}
+
+.img-container4 {
+    background-image: url("/assets/img/caracteristicas/img4.avif");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 40vh;
+}
+
+.img-container4:hover {
+    transform: scale(1.1);
+}
+
+.img-container5 {
+    background-image: url("/assets/img/caracteristicas/img5.avif");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 40vh;
+}
+
+.img-container5:hover {
+    transform: scale(1.1);
+}
+
+.img-container6 {
+    background-image: url("/assets/img/caracteristicas/img6.avif");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 40vh;
+}
+
+.img-container6:hover {
+    transform: scale(1.1);
+}
+
+.img-container7 {
+    background-image: url("/assets/img/caracteristicas/img7.avif");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 40vh;
+}
+
+.img-container7:hover {
+    transform: scale(1.1);
+}
+
+.img-container8 {
+    background-image: url("/assets/img/caracteristicas/img8.avif");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 40vh;
+}
+
+.img-container8:hover {
+    transform: scale(1.1);
+}
+
+.img-container9 {
+    background-image: url("/assets/img/caracteristicas/img9.avif");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 40vh;
+}
+
+.img-container9:hover {
+    transform: scale(1.1);
+}
+
+.img-container10 {
+    background-image: url("/assets/img/caracteristicas/img10.avif");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 40vh;
+}
+
+.img-container10:hover {
+    transform: scale(1.1);
+}
