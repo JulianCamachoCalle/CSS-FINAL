@@ -24,8 +24,16 @@
             </button>
             <section class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
                 <ul class="navbar-nav">
-                    <li class="nav-item m-1">
-                        <a class="nav-link my-1 py-1 px-3" href="caracteristicas.html">Características</a>
+                    <li class="nav-item m-1 dropdown">
+                        <a class="dropdown-toggle nav-link my-1 py-1 px-3" href="#" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Características
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#privacidad">Privacidad</a></li>
+                            <li><a class="dropdown-item" href="#libertad">Libertad</a></li>
+                            <li><a class="dropdown-item" href="#seguridad">Seguridad</a></li>
+                        </ul>
                     </li>
                     <li class="nav-item m-1">
                         <a class="nav-link my-1 py-1 px-3" href="#">TEXTO</a>
@@ -52,7 +60,7 @@
     <section class="container">
         <section class="row">
             <section class="col-md-6">
-                <h1>Caracterísitica de Seguridad de VPN</h1>
+                <h1 class="text-1">Características de Seguridad de VPN</h1>
                 <p>Navegue por la web con tranquilidad. Proton VPN es un servicio de VPN rápida y fiable que protege su
                     privacidad online ocultando su dirección IP real.</p>
                 <ul>
@@ -61,7 +69,7 @@
                     <li>Evita que sus datos de navegación se vendan a los anunciantes</li>
                 </ul>
                 <section class="container">
-                    <a href="#" class="btn btn-primary">Explore todas las caracteristicas</a>
+                    <a href="#principal" class="btn btn-primary p-2">Explore todas las caracteristicas</a>
                 </section>
             </section>
             <section class="col-md-6">
@@ -69,7 +77,8 @@
             </section>
         </section>
         <section class="container mt-4">
-            <h4 class="text-center">Con Proton VPN, también podrá eludir la censura y acceder a los sitios web que estén
+            <h4 class="text-center mensaje">Con Proton VPN, también podrá eludir la censura y acceder a los sitios web
+                que estén
                 bloqueados en su país.</h4>
         </section>
     </section>
@@ -139,17 +148,18 @@
                 </section>
             </section>
             <!--Libertad-->
-            <section class="tab-pane fade show active" id="libertad" role="tabpanel">
+            <section class="tab-pane fade" id="libertad" role="tabpanel">
                 <section class="row">
                     <section class="col-md-4 mb-4">
                         <section class="card h-100">
                             <section class="img-container5"></section>
                             <section class="card-body">
-                                <h5 class="card-title">Oculte su IP</h5>
-                                <p class="card-text">Su dirección IP se puede usar para identificarlo y rastrear su
-                                    actividad online.
-                                    Use Proton VPN para evitar que su dirección IP quede expuesta a anunciantes,
-                                    piratas informáticos y agencias gubernamentales.</p>
+                                <h5 class="card-title">Enrutamiento alternativo </h5>
+                                <p class="card-text">Ayuda a contrarrestar la censura al enrutar su conexión
+                                    a través de redes de terceros, como AWS, cuando el acceso a nuestros
+                                    servidores se encuentra bloqueado.
+
+                                </p>
                             </section>
                         </section>
                     </section>
@@ -157,10 +167,10 @@
                         <section class="card h-100">
                             <section class="img-container6"></section>
                             <section class="card-body">
-                                <h5 class="card-title">Privacidad Suiza</h5>
-                                <p class="card-text">Protección legal suiza, sin importar dónde se encuentre
-                                    Proton VPN tiene su sede en Suiza, lo que le brinda la protección de algunas de
-                                    las leyes de privacidad más estrictas del mundo.</p>
+                                <h5 class="card-title">Stealth</h5>
+                                <p class="card-text">Supere varias formas de censura avanzada con Stealth,
+                                    nuestro protocolo VPN de ofuscación personalizado basado en WireGuard
+                                    complementado con TLS.</p>
                             </section>
                         </section>
                     </section>
@@ -168,10 +178,13 @@
                         <section class="card h-100">
                             <section class="img-container7"></section>
                             <section class="card-body">
-                                <h5 class="card-title">Política de no registro</h5>
-                                <p class="card-text">Proton VPN se compromete a proteger su privacidad, por lo que
-                                    tenemos una política estricta de cero registros. No mantenemos ningún registro
-                                    de su actividad online y no almacenamos ningún metadato.</p>
+                                <h5 class="card-title">Smart Protocol
+                                </h5>
+                                <p class="card-text">Aproveche su inteligencia para probar redes y así descubrir
+                                    la mejor configuración del protocolo VPN necesaria para lograr el mejor
+                                    rendimiento o para evitar la censura.
+
+                                </p>
                             </section>
                         </section>
                     </section>
@@ -180,17 +193,15 @@
 
 
             <!--Privacidad-->
-            <section class="tab-pane fade show active" id="seguridad" role="tabpanel">
+            <section class="tab-pane fade" id="seguridad" role="tabpanel">
                 <section class="row">
                     <section class="col-md-4 mb-4">
                         <section class="card h-100">
                             <section class="img-container8"></section>
                             <section class="card-body">
-                                <h5 class="card-title">Oculte su IP</h5>
-                                <p class="card-text">Su dirección IP se puede usar para identificarlo y rastrear su
-                                    actividad online.
-                                    Use Proton VPN para evitar que su dirección IP quede expuesta a anunciantes,
-                                    piratas informáticos y agencias gubernamentales.</p>
+                                <h5 class="card-title">Cifrado</h5>
+                                <p class="card-text">Nuestros protocolos VPN usan cifrados de código abierto de
+                                    estándares probados como AES-256 y ChaCha20 con sus ajustes más sólidos.</p>
                             </section>
                         </section>
                     </section>
@@ -198,10 +209,10 @@
                         <section class="card h-100">
                             <section class="img-container9"></section>
                             <section class="card-body">
-                                <h5 class="card-title">Privacidad Suiza</h5>
-                                <p class="card-text">Protección legal suiza, sin importar dónde se encuentre
-                                    Proton VPN tiene su sede en Suiza, lo que le brinda la protección de algunas de
-                                    las leyes de privacidad más estrictas del mundo.</p>
+                                <h5 class="card-title">Protocolos sólidos</h5>
+                                <p class="card-text">Solo usamos los protocolos VPN más sólidos
+                                    y criptográficamente seguros,como WireGuard y OpenVPN.
+                                </p>
                             </section>
                         </section>
                     </section>
@@ -209,10 +220,10 @@
                         <section class="card h-100">
                             <section class="img-container10"></section>
                             <section class="card-body">
-                                <h5 class="card-title">Política de no registro</h5>
-                                <p class="card-text">Proton VPN se compromete a proteger su privacidad, por lo que
-                                    tenemos una política estricta de cero registros. No mantenemos ningún registro
-                                    de su actividad online y no almacenamos ningún metadato.</p>
+                                <h5 class="card-title">Secreto directo </h5>
+                                <p class="card-text">Secreto directo genera una nueva clave de cifrado en cada sesión,
+                                    lo que mantiene su historial de navegación seguro aunque una de las claves
+                                    se vea comprometida en el futuro.</p>
                             </section>
                         </section>
                     </section>
@@ -221,46 +232,81 @@
         </section>
     </section>
 
-<hr>
+    <section class="container principal p-4 rounded-4 shadow" id="principal">
+        <section class="row">
+            <section class="col-md-6">
+                <h3>Protege tu internet</h3>
+                <ul>
+                    <li>Estricta política de cero registros</li>
+                    <li>Todas las aplicaciones son de código abierto y auditadas</li>
+                    <li>Servidores de alta velocidad (hasta 10 Gbps)</li>
+                    <li>Con sede en Suiza</li>
+                    <li>Garantía de devolución de dinero de 30 días</li>
+                </ul>
+                <a href="#" class="btn btn-light text-dark">Consigue Proton VPN</a>
+            </section>
+            <section class="col-md-6">
+                <figure class="img-cotainer-1"></figure>
+            </section>
+        </section>
+    </section>
+
 
     <section class="container mt-4">
         <section class="row">
-            <section class="col-md-4">
-                <h4>De confianza</h4>
-                <p>
-                    Es importante que use una VPN confiable; por eso, somos una de las únicas empresas de VPN que saben
-                    exactamente quién administra nuestro servicio.
-
-                    Nuestro equipo tiene una larga trayectoria en seguridad, ya que anteriormente creó Proton Mail, el
-                    servicio de correo electrónico cifrado más grande del mundo.
-
-                    Ya sea por hacer frente a Gobiernos, educar al público o capacitar a periodistas, tenemos una larga
-                    historia de lucha por la privacidad online y de contribución a la comunidad de código abierto.
-                </p>
+            <section class="col-md-4 mb-4">
+                <section class="card h-100 tarjetas">
+                    <section class="card-body">
+                        <h4 class="card-title text-center">De confianza</h4>
+                        <p class="card-text">
+                            Es importante que use una VPN confiable; por eso, somos una de las únicas empresas de VPN
+                            que saben
+                            exactamente quién administra nuestro servicio.
+                            Nuestro equipo tiene una larga trayectoria en seguridad, ya que anteriormente creó Proton
+                            Mail, el
+                            servicio de correo electrónico cifrado más grande del mundo.
+                            Ya sea por hacer frente a Gobiernos, educar al público o capacitar a periodistas, tenemos
+                            una larga
+                            historia de lucha por la privacidad online y de contribución a la comunidad de código
+                            abierto.
+                        </p>
+                    </section>
+                </section>
             </section>
-            <section class="col-md-4">
-                <h4>Código abierto</h4>
-                <p>
-                    Fundado por científicos del MIT y el CERN, Proton VPN cree en la transparencia y la revisión de
-                    colegas. Nuestras aplicaciones son 100 % de código abierto, por lo que cualquiera puede examinar de
-                    qué se componen.
-
-                    Esta transparencia significa que puede estar seguro de que nuestras aplicaciones hacen lo que se
-                    supone que deben hacer, y solo lo que se supone que deben hacer.
-
-                    Puede ver el código de todas nuestras aplicaciones en GitHub.
-                </p>
+            <section class="col-md-4 mb-4">
+                <section class="card h-100 tarjetas">
+                    <section class="card-body">
+                        <h4 class="card-title text-center">Código abierto</h4>
+                        <p class="card-text">
+                            Fundado por científicos del MIT y el CERN, Proton VPN cree en la transparencia y la revisión
+                            de
+                            colegas. Nuestras aplicaciones son 100 % de código abierto, por lo que cualquiera puede
+                            examinar de
+                            qué se componen.
+                            Esta transparencia significa que puede estar seguro de que nuestras aplicaciones hacen lo
+                            que se
+                            supone que deben hacer, y solo lo que se supone que deben hacer.
+                            Puede ver el código de todas nuestras aplicaciones en GitHub.
+                        </p>
+                    </section>
+                </section>
             </section>
-            <section class="col-md-4">
-                <h4>Auditado de forma independiente</h4>
-                <p>
-                    Aunque ser de código abierto significa que cualquiera puede verificar nuestro código, Proton VPN
-                    también encarga periódicamente auditorías profesionales para todo nuestro software de versión
-                    completa a expertos en seguridad independientes.
-
-                    A diferencia de algunas empresas de VPN, publicamos los resultados completos de estas auditorías en
-                    Internet.
-                </p>
+            <section class="col-md-4 mb-4">
+                <section class="card h-100 tarjetas">
+                    <section class="card-body">
+                        <h4 class="card-title text-center">Auditado de forma independiente</h4>
+                        <p class="card-text">
+                            Aunque ser de código abierto significa que cualquiera puede verificar nuestro código, Proton
+                            VPN
+                            también encarga periódicamente auditorías profesionales para todo nuestro software de
+                            versión
+                            completa a expertos en seguridad independientes.
+                            A diferencia de algunas empresas de VPN, publicamos los resultados completos de estas
+                            auditorías en
+                            Internet.
+                        </p>
+                    </section>
+                </section>
             </section>
         </section>
     </section>
@@ -354,9 +400,6 @@
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
-        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
         crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
