@@ -1,3 +1,15 @@
+@keyframes escribir {
+    from {
+        width: 0
+    }
+}
+
+@keyframes mostrar {
+    50% {
+        border-color: transparent
+    }
+}
+
 @keyframes rotate360 {
     from {
         transform: rotate(0deg);
@@ -20,9 +32,10 @@
 
 @keyframes wave-animation-bottom {
     from {
-      transform: translateX(-50%) scaleY(-1);
+        transform: translateX(-50%) scaleY(-1);
     }
+
     to {
-      transform: translateX(0) scaleY(-1);
+        transform: translateX(0) scaleY(-1);
     }
-  }
+}

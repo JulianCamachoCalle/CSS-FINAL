@@ -1,10 +1,166 @@
 @import url('headerAndFooter.css');
+@import url('animaciones.css');
 
-.opiniones {
+body {
+    background-color: #f4f2fa !important;
+    font-family: "Noto Serif", serif !important;
+}
+
+.texto-rotacion {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #8031b4;
+    transform: translate(-80px);
+}
+
+.texto-rotacion p {
+    display: inline-flex;
+    margin: 0;
+    vertical-align: top;
+}
+
+.texto-rotacion p .palabra {
+    position: absolute;
+    display: flex;
+    opacity: 0;
+}
+
+
+.texto-rotacion p .palabra .letra {
+    transform-origin: center center 25px;
+}
+
+.out {
+    transform: rotateX(90deg);
+    transition: 0.32s cubic-bezier(0.6, 0, 0.7, 0.2);
+}
+
+.in {
+    transform: 0.8s ease;
+}
+
+.behind {
+    transform: rotateX(-90deg);
+}
+
+.w-1 {
+    color: rgb(5, 5, 90);
+}
+
+.w-2 {
+    color: rgb(80, 5, 5);
+}
+
+.w-3 {
+    color: rgb(4, 53, 4);
+}
+
+.w-4 {
+    color: rgb(70, 47, 6);
+}
+
+.w-5 {
+    color: rgb(77, 7, 18);
+}
+
+.w-6 {
+    color: rgb(8, 73, 73);
+}
+
+.principal {
+    color: #460a6e;
+
+    span {
+        display: block;
+        color: #3b1753;
+        font-weight: bold;
+        font-size: 3rem !important;
+        white-space: nowrap;
+        border-right: 4px solid;
+        width: 22ch;
+
+        animation: escribir 2s steps(22), mostrar .5s infinite step-end alternate;
+        overflow: hidden;
+    }
+}
+
+.iconos {
+    &:hover {
+        animation: rotate360 1.5s linear infinite;
+    }
+}
+
+.figura-principal {
+    background-image: url("/assets/img/inicio-principal.avif");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    height: 75vh;
+}
+
+.figura-nosotros {
+    background-image: url("/assets/img/nosotros-inicio.avif");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    min-height: 80vh;
+    transition: transform 0.4s ease-in;
+
+    &:hover {
+        transform: scale(1.05);
+    }
+}
+
+.texto-nosotros {
 
     h2 {
+        font-size: 2.2rem !important;
+        font-weight: 500;
+        color: #5c1f85;
+        max-width: 65%;
+    }
+
+    p {
+        font-size: 1.2rem !important;
         color: #8031b4;
-        font-weight: bold;
+        max-width: 75%;
+
+        strong {
+            color: #5c1f85;
+        }
+    }
+
+    a {
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: #735bfc;
+        text-decoration: none;
+        border: 2px solid #735bfc;
+        border-radius: 50px;
+        transition: background-color 0.4s, color 0.4s, box-shadow 0.4s ease-in-out;
+
+        &:hover {
+            background-color: #735bfc;
+            color: white;
+            box-shadow: rgba(0, 0, 0, 0.3) 0px 10px 25px, rgba(0, 0, 0, 0.22) 0px 10px 8px;
+        }
+    }
+}
+
+.opiniones {
+    .titulo-clientes {
+        span {
+            display: block;
+            font-size: 2.5rem !important;
+            color: #8031b4;
+            font-weight: bold;
+            white-space: nowrap;
+            border-right: 4px solid;
+            width: 29ch;
+
+            animation: escribir 2s steps(29), mostrar .5s infinite step-end alternate;
+            overflow: hidden;
+        }
     }
 
     header {
@@ -16,8 +172,9 @@
         }
     }
 
-    img {
-        height: 120px;
+    a {
+        font-weight: 700;
+        text-decoration: none;
     }
 
 }
@@ -30,4 +187,55 @@
     &:hover {
         transform: scale(1.05);
     }
+}
+
+.figura1,
+.figura2,
+.figura3,
+.figura4,
+.figura5,
+.figura6,
+.figura7,
+.figura8,
+.figura9 {
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 120px;
+    width: 120px;
+}
+
+.figura1 {
+    background-image: url("/assets/img/opiniones/opinion1.jpg");
+}
+
+.figura2 {
+    background-image: url("/assets/img/opiniones/opinion2.jpg");
+}
+
+.figura3 {
+    background-image: url("/assets/img/opiniones/opinion3.jpg");
+}
+
+.figura4 {
+    background-image: url("/assets/img/opiniones/opinion4.jpg");
+}
+
+.figura5 {
+    background-image: url("/assets/img/opiniones/opinion5.jpg");
+}
+
+.figura6 {
+    background-image: url("/assets/img/opiniones/opinion6.jpg");
+}
+
+.figura7 {
+    background-image: url("/assets/img/opiniones/opinion7.jpg");
+}
+
+.figura8 {
+    background-image: url("/assets/img/opiniones/opinion8.jpg");
+}
+
+.figura9 {
+    background-image: url("/assets/img/opiniones/opinion9.jpg");
 }
