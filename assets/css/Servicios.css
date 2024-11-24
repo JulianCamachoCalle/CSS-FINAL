@@ -1,5 +1,5 @@
 @import url('headerAndFooter.css'); 
-
+/* Inicio*/
 .about-image {
     background-image: url('/assets/img/Servicios/VPN.png');
     background-size: cover;
@@ -103,7 +103,7 @@
     margin-left: 8px;
 }
 
-/* Responsive Design */
+/* Responsive */
 @media (max-width: 768px) {
     .features-item {
         flex-direction: column;
@@ -120,7 +120,8 @@
     }
 }
 
-/* Pricing Section*/
+
+/* Seccin de Precios Paquetes*/
 .pricing .pricing-item {
     background-color: color-mix(in srgb, #1acc, transparent 96%);
     padding: 40px 40px;
@@ -463,7 +464,10 @@ h6,
 
 
 
-/* Servicios Importantes*/
+
+
+
+/* Servicios Informacion*/
 
 .service-item {
     position: relative;
