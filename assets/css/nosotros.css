@@ -263,62 +263,93 @@
 
   /* Sección Equipo */
 #equipo {
-    background: white;
-    color: rgb(0, 0, 0);
-    padding: 50px 20px;
-    text-align: center;
-  }
-  
-  .section-title {
-    font-size: 2.5rem;
-    margin-bottom: 40px;
-    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  }
-  
-  /* Lista de equipo */
-  .team-list {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-  }
-  
-  .team-member {
-    text-align: center;
-    background: rgba(129, 130, 224, 0.1);
-    border-radius: 10px;
-    padding: 20px;
-    width: 200px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-  }
-  
-  .team-member img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    margin-bottom: 15px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
-  }
-  
-  .team-member h3 {
-    font-size: 1.2rem;
-    color: #00d4ff;
-    margin-bottom: 10px;
-  }
-  
-  .team-member p {
-    font-size: 0.9rem;
-    color: #292323;
-  }
-  
-  /* Efecto hover */
-  .team-member:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.5);
-  }
+  background: white;
+  color: rgb(0, 0, 0);
+  padding: 50px 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;  /* Mantiene el título encima de los miembros */
+  align-items: center;     /* Centra todo horizontalmente */
+}
+
+/* Título de la sección */
+.section-title {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Lista de miembros del equipo - Añadimos un contenedor con display flex */
+.team-list {
+  display: flex;               /* Alinea horizontalmente los miembros */
+  justify-content: center;     /* Centra los elementos horizontalmente */
+  gap: 20px;                   /* Espacio entre los miembros */
+  flex-wrap: wrap;             /* Permite que los miembros se ajusten en caso de que no haya suficiente espacio */
+}
+
+/* Miembros del equipo */
+.team-member {
+  text-align: center;
+  background: rgba(129, 130, 224, 0.1);
+  border-radius: 10px;
+  padding: 20px;
+  width: 200px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;          /* Centra los elementos dentro de cada miembro */
+  justify-content: center;
+}
+
+/* Imagen de cada miembro del equipo */
+.team-image {
+  width: 150px;
+  height: 150px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;  /* Para hacer la imagen circular */
+  margin-bottom: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+/* Especificar las imágenes */
+.team-image.ana {
+  background-image: url('../img/opiniones/opinion1.jpg');
+}
+
+.team-image.luis {
+  background-image: url('../img/opiniones/opinion2.jpg');
+}
+
+.team-image.maria {
+  background-image: url('../img/opiniones/opinion3.jpg');
+}
+
+/* Nombre y descripción de cada miembro */
+.team-member h3 {
+  font-size: 1.2rem;
+  color: #00d4ff;
+  margin-bottom: 10px;
+}
+
+.team-member p {
+  font-size: 0.9rem;
+  color: #292323;
+}
+
+/* Efecto hover */
+.team-member:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.5);
+}
+
+
+
+
+
+
+
   
 
 
@@ -374,3 +405,67 @@
     background: rgba(0, 0, 0, 0.1);
   }
   
+  .colecciones-imagenes {
+    background-color: white;
+    color: black;
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+ }
+  .colecciones-imagenes .imagen-seccion {
+    position: relative;
+    margin: 20px;
+    flex: 1 1 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    border-radius: 35px;
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+    transition: background-image 0.5s ease, background-color 0.5s ease;
+ }
+  .colecciones-imagenes .imagen-seccion h3 {
+    position: absolute;
+    color: white;
+    text-align: center;
+    opacity: 1;
+ }
+  .colecciones-imagenes .imagen-seccion:hover {
+    background-color: transparent;
+ }
+  .colecciones-imagenes .imagen-seccion.puma-lafrance {
+    background-image: none;
+ }
+  .colecciones-imagenes .imagen-seccion.puma-lafrance:hover {
+    background-image: url('../img/nosotros/seguridad.jpg');
+    background-size: cover;
+    background-position: center;
+ }
+  .colecciones-imagenes .imagen-seccion.puma-rocketleague {
+    background-image: none;
+ }
+  .colecciones-imagenes .imagen-seccion.puma-rocketleague:hover {
+    background-image: url('../img/nosotros/global.avif');
+    background-size: cover;
+    background-position: center;
+}
+  .colecciones-imagenes .imagen-seccion.puma-onepiece {
+    background-image: none;
+ }
+  .colecciones-imagenes .imagen-seccion.puma-onepiece:hover {
+    background-image: url('../img/nosotros/rendimiento.avif');
+    background-size: cover;
+    background-position: center;
+}
+/* Efecto hover para cada sección de imagen */
+.colecciones-imagenes .imagen-seccion:hover h3 {
+  opacity: 0; /* Hace que el texto desaparezca en el hover */
+}
+
+/* Asegúrate de que el texto sea visible por defecto */
+.colecciones-imagenes .imagen-seccion h3 {
+  opacity: 1; /* El texto es visible por defecto */
+}
