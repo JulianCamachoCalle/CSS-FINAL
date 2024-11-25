@@ -45,7 +45,7 @@ body {
     background: radial-gradient(circle, rgb(255, 255, 255) 1px, transparent 1px);
     background-size: 50px 50px;
     opacity: 0.4;
-    animation: particles 10s linear infinite;
+    animation: particles 2s linear infinite;
     z-index: 1;
   }
   
@@ -151,15 +151,30 @@ body {
 
   /* Sección Historia */
 #historia {
-  background: linear-gradient(135deg, #3e19a7, #8031b4);
+  background: linear-gradient(135deg, #3e19a7, #8031b4, #ff4500, #ffcc00);
+  background-size: 300% 300%;
   color: white;
   padding: 50px 20px;
   text-align: center;
+  animation: gradient-animation 10s ease infinite;
+}
+
+/* Animación del fondo */
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .section-title {
   font-size: 2.5rem;
-  margin-bottom: 40px;  /* Espacio entre el título y la línea de tiempo */
+  margin-bottom: 40px; /* Espacio entre el título y la línea de tiempo */
   text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
@@ -185,6 +200,9 @@ body {
   background: #ffd700;
   z-index: 0;
 }
+
+/* Resto del código permanece igual */
+
 
 .timeline-event {
   position: relative;
@@ -321,15 +339,15 @@ body {
 
 /* Especificar las imágenes */
 .team-image.ana {
-  background-image: url('../img/opiniones/opinion1.jpg');
+  background-image: url('../img/nosotros/ciberseguridad.jpg');
 }
 
 .team-image.luis {
-  background-image: url('../img/opiniones/opinion2.jpg');
+  background-image: url('../img/nosotros/redes.jpg');
 }
 
 .team-image.maria {
-  background-image: url('../img/opiniones/opinion3.jpg');
+  background-image: url('../img/nosotros/desarrolladora-backend.jpg');
 }
 
 /* Nombre y descripción de cada miembro */
@@ -367,52 +385,104 @@ body {
 
   /* Estilo para la sección de beneficios */
 #beneficios-destacados {
-    background-color: #f4f4f9;
-    padding: 50px 20px;
-    text-align: center;
+  background: linear-gradient(120deg, #00c6ff, #0072ff);
+  position: relative;
+  overflow: hidden; /* Oculta cualquier desbordamiento para las partículas */
+  padding: 50px 20px;
+  text-align: center;
+}
+
+/* Partículas animadas */
+#beneficios-destacados::before, #beneficios-destacados::after {
+  content: '';
+  position: absolute;
+  top: -100px;
+  left: -100px;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.3) 10%, transparent 50%);
+  animation: particle-animation 8s linear infinite;
+  pointer-events: none; /* No afecta las interacciones del usuario */
+  opacity: 0.6;
+  z-index: 0;
+}
+
+#beneficios-destacados::after {
+  animation-delay: -4s; /* Desfase de animación para más dinamismo */
+}
+
+/* Animación de partículas */
+@keyframes particle-animation {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
   }
-  
-  /* Título de la sección */
-  .beneficios-title {
-    font-size: 2.5rem;
-    margin-bottom: 40px;
-    color: #333;
-    text-transform: uppercase;
+  50% {
+    transform: translate(-50%, -50%) rotate(180deg);
   }
-  
-  /* Estilo general para cada beneficio */
-  #beneficios-destacados .beneficio {
-    background: rgba(0, 0, 0, 0.05);
-    margin: 20px auto;
-    padding: 20px;
-    border-radius: 10px;
-    max-width: 600px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, background 0.3s ease;
+  100% {
+    transform: translate(0, 0) rotate(360deg);
   }
-  
-  /* Estilo para el título de cada beneficio */
-  #beneficios-destacados .beneficio h3 {
-    font-size: 1.8rem;
-    color: #007bff;
-    margin-bottom: 15px;
-  }
-  
-  /* Estilo para el texto de los beneficios */
-  #beneficios-destacados .beneficio p {
-    font-size: 1rem;
-    line-height: 1.6;
-    color: #555;
-  }
-  
-  /* Efecto hover para cada beneficio */
-  #beneficios-destacados .beneficio:hover {
-    transform: translateY(-10px);
-    background: rgba(0, 0, 0, 0.1);
-  }
+}
+
+/* Título de la sección */
+.beneficios-title {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #fff;
+  text-transform: uppercase;
+  position: relative;
+  z-index: 1;
+  text-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+}
+
+/* Estilo general para cada beneficio */
+#beneficios-destacados .beneficio {
+  background: rgba(255, 255, 255, 0.1);
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 600px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, background 0.3s ease;
+  position: relative;
+  z-index: 1;
+}
+
+/* Efecto hover para cada beneficio */
+#beneficios-destacados .beneficio:hover {
+  transform: scale(1.05) translateY(-10px);
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4);
+}
+
+/* Estilo para el título de cada beneficio */
+#beneficios-destacados .beneficio h3 {
+  font-size: 1.8rem;
+  color: #ffd700;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  transition: color 0.3s ease;
+}
+
+/* Cambio de color en hover */
+#beneficios-destacados .beneficio:hover h3 {
+  color: #ff8c00;
+}
+
+/* Estilo para el texto de los beneficios */
+#beneficios-destacados .beneficio p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #fff;
+  transition: color 0.3s ease;
+}
+
+/* Cambio de color en hover */
+#beneficios-destacados .beneficio:hover p {
+  color: #ddd;
+}
   
   .colecciones-imagenes {
-    background-color: white;
     color: black;
     padding: 20px;
     display: flex;
