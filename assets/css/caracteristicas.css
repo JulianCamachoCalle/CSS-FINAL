@@ -66,6 +66,7 @@ body {
     60% { transform: translateY(-15px); }
 }
 
+/*Cambia de color el titulo*/
 @keyframes colorChange {
     0% { color: rgb(0, 64, 255); }
     50% { color: rgb(106, 0, 226); }
@@ -74,12 +75,13 @@ body {
 
 .text-1 { animation: colorChange 3s infinite; }
 
-/* Cambio de tamaño animado */
+/* Cambio de tamaño animado cada 5 segundos */
 .mensaje {
     color: #000cb2;
     animation: sizeChange 5s infinite;
 }
 
+/*Animacion que aummenta el tamaño de 15 a 20 px*/
 @keyframes sizeChange {
     0% { font-size: 15px }
     100% { font-size: 20px; }
