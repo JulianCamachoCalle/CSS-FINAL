@@ -45,7 +45,7 @@ body {
     background: radial-gradient(circle, rgb(255, 255, 255) 1px, transparent 1px);
     background-size: 50px 50px;
     opacity: 0.4;
-    animation: particles 10s linear infinite;
+    animation: particles 2s linear infinite;
     z-index: 1;
   }
   
@@ -151,15 +151,30 @@ body {
 
   /* Sección Historia */
 #historia {
-  background: linear-gradient(135deg, #3e19a7, #8031b4);
+  background: linear-gradient(135deg, #3e19a7, #8031b4, #ff4500, #ffcc00);
+  background-size: 300% 300%;
   color: white;
   padding: 50px 20px;
   text-align: center;
+  animation: gradient-animation 7s ease infinite;
+}
+
+/* Animación del fondo */
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .section-title {
   font-size: 2.5rem;
-  margin-bottom: 40px;  /* Espacio entre el título y la línea de tiempo */
+  margin-bottom: 40px; /* Espacio entre el título y la línea de tiempo */
   text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
@@ -185,6 +200,9 @@ body {
   background: #ffd700;
   z-index: 0;
 }
+
+/* Resto del código permanece igual */
+
 
 .timeline-event {
   position: relative;
@@ -321,15 +339,15 @@ body {
 
 /* Especificar las imágenes */
 .team-image.ana {
-  background-image: url('../img/opiniones/opinion1.jpg');
+  background-image: url('../img/nosotros/ciberseguridad.jpg');
 }
 
 .team-image.luis {
-  background-image: url('../img/opiniones/opinion2.jpg');
+  background-image: url('../img/nosotros/redes.jpg');
 }
 
 .team-image.maria {
-  background-image: url('../img/opiniones/opinion3.jpg');
+  background-image: url('../img/nosotros/desarrolladora-backend.jpg');
 }
 
 /* Nombre y descripción de cada miembro */
@@ -367,111 +385,243 @@ body {
 
   /* Estilo para la sección de beneficios */
 #beneficios-destacados {
-    background-color: #f4f4f9;
-    padding: 50px 20px;
-    text-align: center;
-  }
-  
-  /* Título de la sección */
-  .beneficios-title {
-    font-size: 2.5rem;
-    margin-bottom: 40px;
-    color: #333;
-    text-transform: uppercase;
-  }
-  
-  /* Estilo general para cada beneficio */
-  #beneficios-destacados .beneficio {
-    background: rgba(0, 0, 0, 0.05);
-    margin: 20px auto;
-    padding: 20px;
-    border-radius: 10px;
-    max-width: 600px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, background 0.3s ease;
-  }
-  
-  /* Estilo para el título de cada beneficio */
-  #beneficios-destacados .beneficio h3 {
-    font-size: 1.8rem;
-    color: #007bff;
-    margin-bottom: 15px;
-  }
-  
-  /* Estilo para el texto de los beneficios */
-  #beneficios-destacados .beneficio p {
-    font-size: 1rem;
-    line-height: 1.6;
-    color: #555;
-  }
-  
-  /* Efecto hover para cada beneficio */
-  #beneficios-destacados .beneficio:hover {
-    transform: translateY(-10px);
-    background: rgba(0, 0, 0, 0.1);
-  }
-  
-  .colecciones-imagenes {
-    background-color: white;
-    color: black;
-    padding: 20px;
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
- }
-  .colecciones-imagenes .imagen-seccion {
-    position: relative;
-    margin: 20px;
-    flex: 1 1 30%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: black;
-    border-radius: 35px;
-    width: 100%;
-    height: 500px;
-    overflow: hidden;
-    transition: background-image 0.5s ease, background-color 0.5s ease;
- }
-  .colecciones-imagenes .imagen-seccion h3 {
-    position: absolute;
-    color: white;
-    text-align: center;
-    opacity: 1;
- }
-  .colecciones-imagenes .imagen-seccion:hover {
-    background-color: transparent;
- }
-  .colecciones-imagenes .imagen-seccion.puma-lafrance {
-    background-image: none;
- }
-  .colecciones-imagenes .imagen-seccion.puma-lafrance:hover {
-    background-image: url('../img/nosotros/seguridad.jpg');
-    background-size: cover;
-    background-position: center;
- }
-  .colecciones-imagenes .imagen-seccion.puma-rocketleague {
-    background-image: none;
- }
-  .colecciones-imagenes .imagen-seccion.puma-rocketleague:hover {
-    background-image: url('../img/nosotros/global.avif');
-    background-size: cover;
-    background-position: center;
-}
-  .colecciones-imagenes .imagen-seccion.puma-onepiece {
-    background-image: none;
- }
-  .colecciones-imagenes .imagen-seccion.puma-onepiece:hover {
-    background-image: url('../img/nosotros/rendimiento.avif');
-    background-size: cover;
-    background-position: center;
-}
-/* Efecto hover para cada sección de imagen */
-.colecciones-imagenes .imagen-seccion:hover h3 {
-  opacity: 0; /* Hace que el texto desaparezca en el hover */
+  background: linear-gradient(135deg, #ffffff, #b3bdc7);
+  position: relative;
+  overflow: hidden; /* Oculta cualquier desbordamiento para las partículas */
+  padding: 50px 20px;
+  text-align: center;
 }
 
-/* Asegúrate de que el texto sea visible por defecto */
+/* Partículas animadas sutiles */
+#beneficios-destacados::before {
+  content: '';
+  position: absolute;
+  top: -50px;
+  left: 0;
+  width: 120%;
+  height: 120%;
+  background: radial-gradient(circle, rgba(0, 123, 255, 0.2) 20%, transparent 70%);
+  animation: fade-move 10s ease-in-out infinite;
+  opacity: 0.5;
+  pointer-events: none;
+  z-index: 0;
+}
+
+#beneficios-destacados::after {
+  content: '';
+  position: absolute;
+  bottom: -50px;
+  right: 0;
+  width: 120%;
+  height: 120%;
+  background: radial-gradient(circle, rgba(255, 193, 7, 0.2) 20%, transparent 70%);
+  animation: fade-move 4s ease-in-out infinite;
+  opacity: 1;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Animación de movimiento para partículas */
+@keyframes fade-move {
+  0%, 100% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(-50%, -50%);
+  }
+}
+
+/* Título de la sección */
+.beneficios-title {
+  font-size: 2.8rem;
+  margin-bottom: 40px;
+  color: #222;
+  text-transform: uppercase;
+  position: relative;
+  z-index: 1;
+  text-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo general para cada beneficio */
+#beneficios-destacados .beneficio {
+  background: rgba(255, 255, 255, 0.7);
+  margin: 20px auto;
+  padding: 30px;
+  border-radius: 15px;
+  max-width: 600px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.4s ease, background 0.4s ease, box-shadow 0.4s ease;
+  position: relative;
+  z-index: 1;
+}
+
+/* Hover con animación moderna */
+#beneficios-destacados .beneficio:hover {
+  transform: scale(1.1) translateY(-15px);
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Estilo para el título de cada beneficio */
+#beneficios-destacados .beneficio h3 {
+  font-size: 1.8rem;
+  color: #007bff;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  position: relative;
+  z-index: 1;
+  transition: color 0.3s ease;
+}
+
+/* Cambio de color en hover */
+#beneficios-destacados .beneficio:hover h3 {
+  color: #ff5733; /* Color vibrante para modernidad */
+}
+
+/* Estilo para el texto de los beneficios */
+#beneficios-destacados .beneficio p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555;
+  transition: color 0.3s ease;
+}
+
+/* Cambio de color en hover */
+#beneficios-destacados .beneficio:hover p {
+  color: #333;
+}
+
+/* Efecto brillante sobre cada beneficio */
+#beneficios-destacados .beneficio::after {
+  content: '';
+  position: absolute;
+  top: -10%;
+  left: -10%;
+  width: 120%;
+  height: 120%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.5) 10%, transparent 60%);
+  opacity: 0;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  transform: scale(0.9);
+  z-index: 0;
+}
+
+#beneficios-destacados .beneficio:hover::after {
+  opacity: 1;
+  transform: scale(1);
+}
+
+  
+.colecciones-imagenes {
+  color: black;
+  padding: 20px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px; /* Espaciado entre elementos */
+}
+
+/* Cada sección de imagen */
+.colecciones-imagenes .imagen-seccion {
+  position: relative;
+  margin: 20px;
+  flex: 1 1 calc(30% - 20px); /* Ajuste flexible para mantener espaciado */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #222; /* Color neutro para el fondo inicial */
+  border-radius: 35px;
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  perspective: 1000px; /* Necesario para el efecto 3D */
+  z-index: 1;
+}
+
 .colecciones-imagenes .imagen-seccion h3 {
-  opacity: 1; /* El texto es visible por defecto */
+  position: absolute;
+  color: white;
+  text-align: center;
+  opacity: 1;
+  z-index: 2;
+  font-size: 1.8rem;
+  transition: opacity 0.3s ease, transform 0.5s ease;
+}
+
+/* Efecto hover para imagen */
+.colecciones-imagenes .imagen-seccion:hover {
+  transform: scale(1.05) rotateY(10deg); /* Efecto de rotación 3D */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Efecto hover para texto */
+.colecciones-imagenes .imagen-seccion:hover h3 {
+  opacity: 0;
+  transform: translateY(-20px);
+}
+
+/* Fondo específico para cada sección */
+.colecciones-imagenes .imagen-seccion.puma-lafrance {
+  background-image: none;
+}
+.colecciones-imagenes .imagen-seccion.puma-lafrance:hover {
+  background-image: url('../img/nosotros/seguridad.jpg');
+  background-size: cover;
+  background-position: center;
+  filter: brightness(0.9); /* Suaviza la imagen */
+}
+
+.colecciones-imagenes .imagen-seccion.puma-rocketleague {
+  background-image: none;
+}
+.colecciones-imagenes .imagen-seccion.puma-rocketleague:hover {
+  background-image: url('../img/nosotros/global.avif');
+  background-size: cover;
+  background-position: center;
+  filter: brightness(0.9);
+}
+
+.colecciones-imagenes .imagen-seccion.puma-onepiece {
+  background-image: none;
+}
+.colecciones-imagenes .imagen-seccion.puma-onepiece:hover {
+  background-image: url('../img/nosotros/rendimiento.avif');
+  background-size: cover;
+  background-position: center;
+  filter: brightness(0.9);
+}
+
+/* Efecto de brillo en hover */
+.colecciones-imagenes .imagen-seccion::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 20%, transparent 70%);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  z-index: 1;
+}
+
+.colecciones-imagenes .imagen-seccion:hover::after {
+  opacity: 1;
+}
+
+/* Animación inicial de entrada */
+.colecciones-imagenes .imagen-seccion {
+  animation: fadeIn 1s ease both;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
