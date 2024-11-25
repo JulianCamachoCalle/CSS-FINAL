@@ -25,7 +25,7 @@
 
 
 
-
+/*BOTONES DE DESCARGA*/
 /*Download android y ios*/
 .download-btnA {
     background-image: url('/assets/img/plataformas/a2.png');
@@ -105,6 +105,7 @@
     margin-bottom: 40px;
 }
 
+
 /*TARJETAS PASOS*/
 .step-card {
     padding: 20px;
@@ -137,6 +138,7 @@
 }
 
 
+/*CONTENIDO DE PASOS*/
 
 .step-content {
     margin-bottom: 20px;
@@ -165,7 +167,7 @@
 
 .step-subtitle {
     color: #622cdf;
-    font-size: 18px;
+    font-size: 22px;
     margin-bottom: 15px;
 }
 
@@ -227,18 +229,23 @@
     padding-left: 20px;
 }
 
-/*********************/
+
+
+/*PASOS 3 COLUMNA*/
+
 #titulo {
     font-family: "Nunito", serif;
-    color: #6127e9;
+    color: #4c1bd3;
     transform: scale(1.1); /* Aumenta el tamaño del texto */
-    color: #37265f; /* Cambio de color si lo deseas */
+    color: #472f81; /* Cambio de color si lo deseas */
 }
 
 #descripcion {
     font-family: "Nunito", serif;
-    color: #986cff;;
+    color: #2628a2;;
 }
+
+
 
 
 .bg-image {
@@ -272,7 +279,7 @@
 }
 
 .tittleVPN {
-    color: #753ff4;
+    color: #4512bb;
     font-family: "Nunito", serif;
 
 }
@@ -281,7 +288,12 @@
     color: #7171e7;
 }
 
-/**************************/
+
+
+
+
+
+/*POR QUE USAR VPN*/
 
 .tituloPRO {
     color: #5d27dc;
@@ -307,6 +319,8 @@
 
 }
 
+/*ANIAMCION AL PASAR EL CURSOR
+*/
 .carsito {
     transition: transform 0.3s ease, color 0.3s ease;
 }
@@ -322,7 +336,22 @@
 .carsito:hover .bi {
     color: white;
 
+
 }
+/*ANIMACIONES*/
+
+/* Desvanecimiento suave del texto */
+.step-title, .step-description, .step-subtitle {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+/* Mostrar el texto cuando el cursor pasa sobre la tarjeta */
+.step-card:hover .step-title, .step-card:hover .step-description, .step-card:hover .step-subtitle {
+    opacity: 1;
+}
+
+
 
 
 
@@ -354,16 +383,7 @@
 
 
 
-/* Desvanecimiento suave del texto */
-.step-title, .step-description, .step-subtitle {
-    opacity: 0;
-    transition: opacity 0.5s ease;
-}
 
-/* Mostrar el texto cuando el cursor pasa sobre la tarjeta */
-.step-card:hover .step-title, .step-card:hover .step-description, .step-card:hover .step-subtitle {
-    opacity: 1;
-}
 
 
 
