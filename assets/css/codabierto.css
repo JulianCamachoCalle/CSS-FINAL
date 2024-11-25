@@ -1,0 +1,197 @@
+/* Fondo general utilizando section principal */
+codabierto-container {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-image: url('../img/Comunidad/fondo1.avif'); /* Cambia 'ruta-de-tu-imagen.jpg' */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #46176c;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Encabezado dentro de una sección */
+codabierto-header {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+codabierto-header p {
+    max-width: 800px;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    margin: 0 auto;
+}
+
+/* Pie de página con section */
+codabierto-footer {
+    margin-top: 2rem;
+}
+
+codabierto-footer p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+/* Botones personalizados */
+codabierto-btn {
+    display: inline-block;
+    margin: 0.5rem;
+    font-size: 1rem;
+    text-decoration: none;
+    color: #735bfc;
+    border: 2px solid #735bfc;
+    border-radius: 20px;
+    padding: 0.5rem 1rem;
+    transition: background-color 0.4s, color 0.4s, box-shadow 0.4s ease-in-out;
+}
+
+codabierto-btn:hover {
+    background-color: #735bfc;
+    color: white;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 10px 25px, rgba(0, 0, 0, 0.22) 0px 10px 8px;
+}
+
+codabierto-card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    margin: 2rem auto;
+    padding: 1rem;
+}
+
+
+
+codabierto-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+codabierto-card-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+codabierto-icon {
+    width: 50px;
+    height: 50px;
+    margin-right: 1rem;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Especificar imágenes para cada icono */
+codabierto-card:nth-child(1) codabierto-icon {
+    background-image: url('../img/Comunidad/protonMail.png'); /* Cambia la ruta según corresponda */
+}
+
+codabierto-card:nth-child(2) codabierto-icon {
+    background-image: url('../img/Comunidad/protonVPN.png');
+}
+
+codabierto-card:nth-child(3) codabierto-icon {
+    background-image: url('../img/Comunidad/protonCalendar.png');
+}
+
+codabierto-card:nth-child(4) codabierto-icon {
+    background-image: url('../img/Comunidad/protonDrive.png');
+}
+
+codabierto-card:nth-child(5) codabierto-icon {
+    background-image: url('../img/Comunidad/protonPass.png');
+}
+
+codabierto-card:nth-child(6) codabierto-icon {
+    background-image: url('../img/Comunidad/protonWallet.png');
+}
+
+codabierto-title {
+    font-size: 1.5rem;
+    color: #46176c;
+    font-weight: bold;
+    margin: 0;
+}
+
+codabierto-link {
+    display: block;
+    font-size: 0.9rem;
+    color: #5c46db;
+    text-decoration: none;
+    margin: 0.5rem 0;
+    transition: color 0.3s ease;
+}
+
+codabierto-link:hover {
+    color: #735bfc;
+}
+
+codabierto-button {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: white;
+    background: linear-gradient(90deg, #735bfc, #e86bfc);
+    border: none;
+    border-radius: 20px;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+codabierto-button:hover {
+    background: linear-gradient(90deg, #5c46db, #d13bdb);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Animación de salto */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Aplicar animación a los títulos */
+codabierto-title {
+    font-size: 1.5rem;
+    color: #46176c;
+    font-weight: bold;
+    margin: 0;
+    display: inline-block;
+    animation: bounce 1s ease-in-out infinite; /* Animación continua */
+}
+
+/* Estado inicial de las tarjetas */
+codabierto-card {
+    background-color: #f8f9fc;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    width: 300px;
+    text-align: left;
+    transition: all 0.5s ease; /* Animación suave */
+    position: relative; /* Necesario para centrar en viewport */
+}
+
+/* Estado cuando una tarjeta está activa */
+codabierto-card.active {
+    width: 500px;
+    height: auto;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000; /* Asegura que esté encima del resto */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
