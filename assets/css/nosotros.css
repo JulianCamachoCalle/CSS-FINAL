@@ -156,7 +156,7 @@ body {
   color: white;
   padding: 50px 20px;
   text-align: center;
-  animation: gradient-animation 10s ease infinite;
+  animation: gradient-animation 7s ease infinite;
 }
 
 /* Animación del fondo */
@@ -385,7 +385,7 @@ body {
 
   /* Estilo para la sección de beneficios */
 #beneficios-destacados {
-  background: linear-gradient(135deg, #ffffff, #abafb3);
+  background: linear-gradient(135deg, #ffffff, #b3bdc7);
   position: relative;
   overflow: hidden; /* Oculta cualquier desbordamiento para las partículas */
   padding: 50px 20px;
@@ -415,8 +415,8 @@ body {
   width: 120%;
   height: 120%;
   background: radial-gradient(circle, rgba(255, 193, 7, 0.2) 20%, transparent 70%);
-  animation: fade-move 12s ease-in-out infinite;
-  opacity: 0.5;
+  animation: fade-move 4s ease-in-out infinite;
+  opacity: 1;
   pointer-events: none;
   z-index: 0;
 }
@@ -427,7 +427,7 @@ body {
     transform: translate(0, 0);
   }
   50% {
-    transform: translate(-10%, -10%);
+    transform: translate(-50%, -50%);
   }
 }
 
