@@ -1,5 +1,9 @@
 @import url('headerAndFooter.css'); 
 
+body {
+    font-family: "Noto Serif", serif !important;
+}
+
 .about-image {
     background-image: url('/assets/img/Servicios/VPN.png');
     background-size: cover;

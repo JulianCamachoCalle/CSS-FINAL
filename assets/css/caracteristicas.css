@@ -2,7 +2,7 @@
 
 /* General */
 * {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana;
+    font-family: "Noto Serif", serif !important;
     box-sizing: border-box;
     margin: 0;
     padding: 0;
